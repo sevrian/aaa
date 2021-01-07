@@ -17,13 +17,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'Auth@login')->name('login');
-Route::post('/postlogin', 'Auth@postlogin');
+Route::get('/', 'AuthController@login')->name('login');
+Route::post('/postlogin', 'AuthController@postlogin');
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('/ubahpassword', 'AuthController@ubahpass');
+Route::patch('/changepass', 'AuthController@updatePassword');
+Route::get('/logout', 'AuthController@logout');
 
-
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', 'DashboardController@index');
-    Route::get('/ubahpassword', 'AuthController@ubahpass');
-    Route::patch('/changepass', 'AuthController@updatePassword');
-    Route::get('/logout', 'AuthController@logout');
-});
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/ubahpassword', 'AuthController@ubahpass');
+//     Route::patch('/changepass', 'AuthController@updatePassword');
+//     Route::get('/logout', 'AuthController@logout');
+// });

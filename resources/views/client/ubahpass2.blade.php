@@ -37,12 +37,28 @@
 
                   <div class="form-group">
                     <div class="d-block">
-                    	<label for="password" class="control-label">Password</label>
+                    	<label for="username" class="control-label">Username</label>
                       
                     </div>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="usernmae" required autocomplete="username">
         
-                    @error('password')
+                    @error('username')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    <div class="invalid-feedback">
+                      please fill in your password
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="d-block">
+                    	<label for="oldpassword" class="control-label">Password</label>
+                      
+                    </div>
+                    <input id="oldpassword" type="password" class="form-control @error('oldpassword') is-invalid @enderror" name="oldpassword">
+        
+                    @error('oldpassword')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -57,7 +73,7 @@
                         <label for="password" class="control-label">Konfirm Password</label>
                        
                      </div>
-                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                     <input id="password" type="password" class="form-control" name="password" required autocomplete="password">
                    </div>
 
                   
