@@ -60,23 +60,22 @@ class AuthController extends Controller
         $user = $request->input('username');
         $oldpass = $request->input('oldpassword');
 
-
-
         $users = DB::table('radcheck')->select('attribute', 'value')->where('username', $user)->get();
         foreach ($users as $value) {
             if ($value->attribute == 'Cleartext-Password') {
-                if ($value->value == $oldpass) $update = true;
+                $update=DB::table('radcheck')
+                ->where('username', $user)
+                ->where('attribute', 'Cleartext-Password')
+                ->update(['value' => $oldpass]);
             }
         }
         if ($update) {
-
+            echo 'update berhasil';
             //tak lebokne kene
 
         } else {
-            return redirect('/');
+            echo 'gagal';
+            // return redirect('/');
         }
-
-
-        return redirect::to('https://poltekkesjogja.ac.id/');
     }
 }

@@ -40,7 +40,7 @@
                     	<label for="username" class="control-label">Username</label>
                       
                     </div>
-                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="usernmae" required autocomplete="username">
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" required autocomplete="username">
         
                     @error('username')
                         <span class="invalid-feedback" role="alert">
