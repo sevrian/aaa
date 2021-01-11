@@ -70,10 +70,10 @@
 
                   <div class="form-group">
                      <div class="d-block">
-                        <label for="password" class="control-label">Konfirm Password</label>
+                        <label for="oldpassword" class="control-label">Konfirm Password</label>
                        
                      </div>
-                     <input id="password" type="password" class="form-control" name="password" required autocomplete="password">
+                     <input id="oldpassword" type="password" class="form-control" name="oldpassword" required autocomplete="password">
                    </div>
 
                   

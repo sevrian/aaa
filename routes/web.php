@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'AuthController@login')->name('login');
+//Route::get('/', 'AuthController@login')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/', 'DashboardController@index');
 Route::get('/ubahpassword', 'AuthController@ubahpass');
 Route::patch('/changepass', 'AuthController@updatePassword');
 Route::get('/logout', 'AuthController@logout');

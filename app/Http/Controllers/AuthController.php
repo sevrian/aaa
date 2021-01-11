@@ -52,7 +52,7 @@ class AuthController extends Controller
 
             ['oldpassword' => 'required'],
 
-            ['password' => 'required']
+
 
         );
 
@@ -63,19 +63,17 @@ class AuthController extends Controller
         $users = DB::table('radcheck')->select('attribute', 'value')->where('username', $user)->get();
         foreach ($users as $value) {
             if ($value->attribute == 'Cleartext-Password') {
-                $update=DB::table('radcheck')
-                ->where('username', $user)
-                ->where('attribute', 'Cleartext-Password')
-                ->update(['value' => $oldpass]);
+                $update = DB::table('radcheck')
+                    ->where('username', $user)
+                    ->where('attribute', 'Cleartext-Password')
+                    ->update(['value' => $oldpass]);
             }
         }
         if ($update) {
-            echo 'update berhasil';
-            //tak lebokne kene
 
+            return redirect::to('https://poltekkesjogja.ac.id/');
         } else {
-            echo 'gagal';
-            // return redirect('/');
+            return  view('client.ubahpass2');
         }
     }
 }
