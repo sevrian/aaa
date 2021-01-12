@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Reset Password &mdash; Stisla</title>
+  <title>Reset Password &mdash; POLTEKKES YOGYAKARTA</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +22,7 @@
       <div class="container mt-5">
        
 
-            <div class="card card-primary">
+            <div class="card car             d-primary">
               <div class="card-header"><h4>Kami Sarankan Sebaiknya Anda Mengubah Password,Setidaknya SATU kali. <br>
             
             </h4></div>
