@@ -70,7 +70,7 @@ class AuthController extends Controller
             }
         }
         if ($update) {
-
+            //update
             return redirect::to('https://poltekkesjogja.ac.id/');
         } else {
             return  view('client.ubahpass2');
